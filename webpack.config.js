@@ -4,7 +4,7 @@ module.exports = {
   ],
   output:{
     path:__dirname,
-    publicPath:'/src/',
+    publicPath:'/',
     filename: 'bundle.js'
   },
   module:{
@@ -17,7 +17,7 @@ module.exports = {
     }]
   },
   resolve:{
-    extensions:['','js','jsx']
+    extensions:['','.js','.jsx']
   },
   devServer:{
     historyApiFallback:true,
