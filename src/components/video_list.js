@@ -5,7 +5,12 @@ import VideoListItem from './video_list_item';
 //refactor from function-based component -> class-based componet: props -> this.props
 const VideoList = (props) => {
   const videoItems = props.videos.map((video) => {
-    return <VideoListItem key={video.etag} video={video}/>
+    return (
+      <VideoListItem
+        onVideoSelect={props.onVideoSelect}
+        key={video.etag}
+        video={video}/>
+    );
   });
 
   return (
